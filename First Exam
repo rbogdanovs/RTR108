@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\chead{SPECIAL FUNCTIONS}
+\cfoot{640}
+\begin{document}
+
+$ $\\
+which is the required result. $\blacktriangleleft $
+
+We note that is it conventional to define, in addition, the functions
+$$P(a, x) \equiv \frac{\gamma(a, x)}{\Gamma(a)}, \quad Q(a, x) \equiv \frac {\Gamma(a, x)}{\Gamma(a)},$$
+which are also often called incomplete gamma functions; it is clear that $Q(a, x) = 1 - P(a, x).$
+\\
+\\
+\begin{center}
+{\textbf{18.12.4 \textit{The error function}}}
+\end{center}\\
+Finally, we mention the \textit{error function}, which is encountered in probability theory and in the solutions of some partial differential equations. The error function is related to the incomplete gamma function by $erf(x) = \gamma(\frac{1}{2}, x^2)/ \surd \pi $ and is thus given by
+$$erf(x) = \frac{2}{\surd\pi} {\int^x_0} {e^{-u^2}}{du} = 1 - \frac{2}{\surd\pi}{\int^\infty_x}{e^{-u^2}}du \qquad (18.167)$$ 
+From this definition we can easily see that
+$$erf(0) = 0, \qquad erf(\infty) = 1, \qquad erf(-x) = -erf(x).$$
+By making the substitution $y = \surd2u$ in (18.167), we find
+
+$$erf(x) = {\surd\frac{2}{\pi}}{\int^{\surd2x}_{0}}{e^{-y^2/2}} dy.$$
+The cumulative probability function $\Phi(x)$ for the standard Gaussian distribution
+(discussed in section 30.9.1) may be written in terms of the error function as
+follows:
+
+$$\Phi (x) = {\frac{1}{\surd 2\pi}}{\int ^x_ {-\infty}}{e^{-y^2/2}}dy$$
+$$= \frac{1}{2}+\frac{1}{\surd2\pi}{\int^x_0}{e^{-y^2/2}}dy$$
+$$= \frac{1}{2} + \frac{1}{2}erf (\frac{x}{\surd 2})$$ \\
+It is also sometimes useful to define the \textit{complementary error function}
+$$erfc(x) = 1 - erf(x) = \frac{2}{\surd \pi} {\int^\infty_x} e^{-u^2}du = \frac{\Gamma({\frac{1}{2}, x^2)}}{\surd \pi}. \qquad \raggedleft{(18.168)} $$ 
+
+\begin{center}
+\textbf{18.13 Exercises}
+\end{center}
+18.1 \qquad Use the explicit expressions
+
+\end{document}
