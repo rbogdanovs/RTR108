@@ -1,6 +1,170 @@
 <!DOCTYPE html>
 <html>
 <body>
+%% Kods Final Exam https://www.overleaf.com/project/5ced118723c8266faa3020a5
+  \documentclass{article}
+\usepackage{geometry}
+\geometry{legalpaper, portrait, margin=31mm}
+\textwidth = 140mm
+\textheight = 210mm
+\footskip = 16mm
+
+%%\textcolor{blue}{FIGURE \textbf{3}
+%%\textcolor{black}{Writing (20, 10) as a Convex Combination of bfs}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{kantlipsum}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[breakable, theorems, skins]{tcolorbox}
+\tcbset{enhanced}
+\usepackage{tikz}
+
+\definecolor{grayd}{gray}{1}
+\definecolor{gray}{gray}{0.6}
+
+\DeclareRobustCommand{\mybox}[2][gray!20]{%
+\begin{tcolorbox}[   
+        breakable,
+        left=0pt,
+        right=0pt,
+        top=0pt,
+        bottom=0pt,
+        colback=#1,
+        colframe=#1,
+        width=\dimexpr\textwidth\relax, 
+        enlarge left by=0mm,
+        boxsep=5pt,
+        arc=0pt,outer arc=0pt,
+        ]
+        #2
+\end{tcolorbox}
+}
+\begin{document}
+\[
+d = 
+\begin{bmatrix}
+    1 \\
+    1 \\
+    9 \\
+    14
+\end{bmatrix}
+\]
+is a direction of unboundedness for this LP. It is easy to show (see Problem 6) that \textbf{d} is a direction of unboundedness if and if A\textbf{d} = 0 and \textbf{d} $\geq$ \textbf{0}
+
+The following Representation Theorem [for a proof, see Nash and Sofer (1996)] is the key insight needed to show why any LP with an optimal solution has an optimal bfs.
+\item \mybox{THEOREM\textbf{ 2}}
+
+\item[gray]\mybox{{Consider an LP in standard form, having bfs $\textbf{b}_1$, $\textbf{b}_2$,..., $\textbf{b}_k$. Any point \textbf{x} in the LP's feasible region may be written in the form
+
+$$\textbf{x = d} + \sum \frac{i=k}{i=1} \sigma_i \textbf{b}_i$$
+
+where \textbf{d} is \textbf{0} or a direction of unboundedness and $\sum \frac{i=k}{i=1}$ $\sigma_i = 1$  and $\sigma_i \geq0.$}}
+
+If the LP's feasible region is bounded, then \textbf{d = 0}, and we may write \textbf{x} = $\sum \frac{i=k}{i=1} \sigma_i \textbf{b}_i$, where the $\sigma_i$ are nonnegative weights adding to 1. In this case, we see that any feasible \textbf{x} may be written as a \textbf{convex combination} of the LP's bfs. We now give two illustrations of Theorem 2.
+
+Consider the Leather Limited example. The feasible region is bounded. To illustrate Theorem 2, we can write the point $G$ = (20, 10) ($G$ is not a bfs!) in Figure 3 as a convex combination of the LP's bfs. Note from Figure 3 that point $G$ may be written as $\frac{1}{6}F$ + $\frac{5}{6}H$ [here $H$ = (24, 12)]. Then note that point $H$ may be written as .6$E$ + .4$C$. Putting these two relationships together, we may write point $G$ as  $\frac{1}{6}F$ + $\frac{5}{6}$(.6$E$ + .4$C$) = $\frac{1}{6}F$ + $\frac{1}{2}E$ + $\frac{1}{3}C$. This expresses point $G$ as a convex combination of the LP's extreme points.
+
+To illustrate Theorem 2 for an unbounded LP, let's consider Example 2 of Chapter 3 (the Dorian example; see Figure 4) and try to express the point $F$ = (14, 4) in the representation given in Theorem 2. Recall that in standard form the constraints for the Dorian example are given by 
+$$7x_1 + 2x_2 - e_1 = 28$$
+%%\maketitle
+%%\textbf \textcolor{blue}{{FIGURE 3} 
+%%Writing (20, 10) as a Convex Combination of bfs
+
+\begin{tikzpicture}[scale=0.0735]
+
+\draw [<->, very thick, black]  (65, 0) -- (0, 0) -- (0, 65);
+
+\draw [ultra thick, blue](0,60) -- (30,0);
+ \filldraw[blue] (0,60) circle (20pt) node[anchor=south west] {D};
+ \filldraw[blue] (0,40) circle (20pt) node[anchor=south west] {B};
+ \filldraw[blue] (20,20) circle (20pt) node[anchor=south west] {E};
+ \filldraw[blue] (24,12) circle (20pt) node[anchor=east] {H};
+ \filldraw[blue] (40,0) circle (20pt) node[anchor=south west] {A};
+ \filldraw[blue] (30,0) circle (20pt) node[anchor=south west] {C};
+ \filldraw[blue] (0,0) circle (20pt) node[anchor=north east] {F};
+ \filldraw[blue] (20,10) circle (20pt) node[anchor=north] {G};
+ \node at (70,0) {$x_1$};
+
+\draw[ultra thick, blue](0,40) -- (40,0);
+
+\draw[ultra thick, blue](0,0) -- (20,10);
+
+\draw[ultra thick, blue](20,10) -- (24,12);
+
+
+
+\end{tikzpicture}
+\fancyfoot{\textbf{4.3} Direction of Unboundedness}\qquad{ } \qquad {135}
+
+
+\end{document}
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+%% Kods First Exam https://www.overleaf.com/project/5c6e490834ff9f6576ce6792
+  \documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\chead{SPECIAL FUNCTIONS}
+\cfoot{640}
+\begin{document}
+
+$ $\\
+which is the required result. $\blacktriangleleft $
+
+We note that is it conventional to define, in addition, the functions
+$$P(a, x) \equiv \frac{\gamma(a, x)}{\Gamma(a)}, \quad Q(a, x) \equiv \frac {\Gamma(a, x)}{\Gamma(a)},$$
+which are also often called incomplete gamma functions; it is clear that $Q(a, x) = 1 - P(a, x).$
+\\
+\\
+\begin{center}
+{\textbf{18.12.4 \textit{The error function}}}
+\end{center}\\
+Finally, we mention the \textit{error function}, which is encountered in probability theory and in the solutions of some partial differential equations. The error function is related to the incomplete gamma function by $erf(x) = \gamma(\frac{1}{2}, x^2)/ \surd \pi $ and is thus given by
+$$erf(x) = \frac{2}{\surd\pi} {\int^x_0} {e^{-u^2}}{du} = 1 - \frac{2}{\surd\pi}{\int^\infty_x}{e^{-u^2}}du \qquad (18.167)$$ 
+From this definition we can easily see that
+$$erf(0) = 0, \qquad erf(\infty) = 1, \qquad erf(-x) = -erf(x).$$
+By making the substitution $y = \surd2u$ in (18.167), we find
+
+$$erf(x) = {\surd\frac{2}{\pi}}{\int^{\surd2x}_{0}}{e^{-y^2/2}} dy.$$
+The cumulative probability function $\Phi(x)$ for the standard Gaussian distribution
+(discussed in section 30.9.1) may be written in terms of the error function as
+follows:
+
+$$\Phi (x) = {\frac{1}{\surd 2\pi}}{\int ^x_ {-\infty}}{e^{-y^2/2}}dy$$
+$$= \frac{1}{2}+\frac{1}{\surd2\pi}{\int^x_0}{e^{-y^2/2}}dy$$
+$$= \frac{1}{2} + \frac{1}{2}erf (\frac{x}{\surd 2})$$ \\
+It is also sometimes useful to define the \textit{complementary error function}
+$$erfc(x) = 1 - erf(x) = \frac{2}{\surd \pi} {\int^\infty_x} e^{-u^2}du = \frac{\Gamma({\frac{1}{2}, x^2)}}{\surd \pi}. \qquad \raggedleft{(18.168)} $$ 
+
+\begin{center}
+\textbf{18.13 Exercises}
+\end{center}
+18.1 \qquad Use the explicit expressions
+
+\end{document}
+  
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/aWcQxTV90lU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
